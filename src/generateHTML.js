@@ -1,8 +1,8 @@
-function renderManager(data) {
+function cardManager(data) {
     return `<div class="employeeCard ml-3 border border-primary">
     <div class="card-header">
         <h2 class="card-title">${data.name}</h2>
-        <h3 class="card-title"><span class="material-icons">assignment</span>${manager.role}</h3>
+        <h3 class="card-title"><span class="material-icons">assignment</span>Manager</h3>
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush ">
@@ -13,11 +13,11 @@ function renderManager(data) {
     </div>
 </div>`;
 }
-function renderEngineer(data) {
+function cardEngineer(data) {
     return `<div class="employeeCard ml-3 border border-primary ">
     <div class="card-header">
         <h2 class="card-title">${data.name}</h2>
-        <h3 class="card-title"><span class="material-icons">engineering</span>${engineer.role}</h3>
+        <h3 class="card-title"><span class="material-icons">engineering</span>Engineer</h3>
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush">
@@ -28,11 +28,11 @@ function renderEngineer(data) {
     </div>
 </div>`
 }
-function renderIntern(data) {
+function cardIntern(data) {
     return `<div class="employeeCard ml-3 border border-primary ">
     <div class="card-header">
-        <h2 class="card-title">${data.name}</h2>
-        <h3 class="card-title"><span class="material-icons">school</span>${intern.role}</h3>
+        <h2 class="card-title">Tiger Team Profile</h2>
+        <h3 class="card-title"><span class="material-icons">school</span>Intern</h3>
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush">
@@ -48,11 +48,11 @@ function generateHTML(teamMembers) {
     let employeeCard = "";
     teamMembers.forEach(member => {
         if (member.getRole() === "Manager") {
-            employeeCard += renderManager(member);
+            employeeCard += cardManager(member);
         } else if (member.getRole() === "Engineer") {
-            employeeCard += renderEngineer(member);
+            employeeCard += cardEngineer(member);
         } else if (member.getRole() === "Intern") {
-            employeeCard += renderIntern(member);
+            employeeCard += cardIntern(member);
         };
     }) 
      return `<!DOCTYPE html>
@@ -67,12 +67,12 @@ function generateHTML(teamMembers) {
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
          <link rel="preconnect" href="https://fonts.gstatic.com">
          <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&display=swap" rel="stylesheet">
-         <link href="./style.css" rel="stylesheet">
+         <link href="./dist/style.css" rel="stylesheet">
      </head>
      
      <body>
          <header>
-             <h1 class="display-4 justify-content-center">${teamName}</h1>
+             <h1 class="display-4 justify-content-center">Tiger Team</h1>
          </header>
          <br>
 
