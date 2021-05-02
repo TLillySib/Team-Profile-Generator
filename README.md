@@ -2,9 +2,6 @@
 
   ![gpl](https://img.shields.io/badge/license-GPL%203.0-green)
 
-  ## Direct Link 
-
-  
      
   ## Description
 

@@ -67,7 +67,7 @@ function generateHTML(teamMembers) {
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
          <link rel="preconnect" href="https://fonts.gstatic.com">
          <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&display=swap" rel="stylesheet">
-         <link href="./dist/style.css" rel="stylesheet">
+         <link href="./output/style.css" rel="stylesheet">
      </head>
      
      <body>
