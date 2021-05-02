@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/TLillySib/Team-Profile-Generator#readme",
   "dependencies": {
+    "bootstrap": "^4.6.0",
+    "fontawesome": "^5.6.3",
+    "fs": "0.0.1-security",
     "inquirer": "^8.0.0"
   },
   "devDependencies": {

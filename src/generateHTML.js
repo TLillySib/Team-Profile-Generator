@@ -1,62 +1,60 @@
-function renderManager(manager) {
-    return `<div class="employee-card ml-3 border border-primary">
+function renderManager(data) {
+    return `<div class="employeeCard ml-3 border border-primary">
     <div class="card-header">
-        <h2 class="card-title">${manager.name}</h2>
+        <h2 class="card-title">${data.name}</h2>
         <h3 class="card-title"><span class="material-icons">assignment</span>${manager.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush ">
-            <li class="list-group-item"><strong>ID:</strong>${manger.id}</li>
-            <li class="list-group-item"><strong>Email: </strong>${manager.email}</li>
-            <li class="list-group-item"><strong>Office Number:</strong>${manager.officeNumber}</li>
+            <li class="list-group-item"><strong>ID:</strong>${data.id}</li>
+            <li class="list-group-item"><strong>Email: </strong>${data.email}</li>
+            <li class="list-group-item"><strong>Office Number:</strong>${data.officeNumber}</li>
         </ul>
     </div>
 </div>`;
 }
-function renderEngineer(engineer) {
-    return `<div class="employee-card ml-3 border border-primary ">
+function renderEngineer(data) {
+    return `<div class="employeeCard ml-3 border border-primary ">
     <div class="card-header">
-        <h2 class="card-title">${engineer.name}</h2>
+        <h2 class="card-title">${data.name}</h2>
         <h3 class="card-title"><span class="material-icons">engineering</span>${engineer.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>ID:</strong>${engineer.id}</li>
-            <li class="list-group-item"><strong>Email: </strong>${engineer.email}</li>
-            <li class="list-group-item"><strong>GitHub:</strong>${engineer.gitHub}</li>
+            <li class="list-group-item"><strong>ID:</strong>${data.id}</li>
+            <li class="list-group-item"><strong>Email: </strong>${data.email}</li>
+            <li class="list-group-item"><strong>GitHub:</strong>${data.gitHub}</li>
         </ul>
     </div>
 </div>`
 }
-function renderIntern(intern) {
-    return `<div class="employee-card ml-3 border border-primary ">
+function renderIntern(data) {
+    return `<div class="employeeCard ml-3 border border-primary ">
     <div class="card-header">
-        <h2 class="card-title">${intern.name}</h2>
+        <h2 class="card-title">${data.name}</h2>
         <h3 class="card-title"><span class="material-icons">school</span>${intern.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>ID:</strong>${intern.id}</li>
-            <li class="list-group-item"><strong>Email: </strong>${intern.email}</li>
-            <li class="list-group-item"><strong>School:</strong>${intern.school}</li>
+            <li class="list-group-item"><strong>ID:</strong>${data.id}</li>
+            <li class="list-group-item"><strong>Email: </strong>${data.email}</li>
+            <li class="list-group-item"><strong>School:</strong>${data.school}</li>
         </ul>
     </div>
 </div>`
 }
+
 function generateHTML(teamMembers) {
-    teamMembers.filter(answer); 
-        if(answer.getRole() === "Engineer") {
-            for(let i=0; i<answer.length; i++) {
-                createEngineer(answer);
-            }
-        }else if (answer.getRole() === "Intern") {
-            for(let i=0; i<answer.length; i++) {
-                createIntern(answer);
-        }
-        }else{
-            return;
-    
-}
+    let employeeCard = "";
+    teamMembers.forEach(member => {
+        if (member.getRole() === "Manager") {
+            employeeCard += renderManager(member);
+        } else if (member.getRole() === "Engineer") {
+            employeeCard += renderEngineer(member);
+        } else if (member.getRole() === "Intern") {
+            employeeCard += renderIntern(member);
+        };
+    }) 
      return `<!DOCTYPE html>
      <html lang="en">
      <head>
@@ -77,66 +75,17 @@ function generateHTML(teamMembers) {
              <h1 class="display-4 justify-content-center">${teamName}</h1>
          </header>
          <br>
-         ${renderManager(teamMembers[0])}
+
          <section>
-             <div class="container">
-                 <div class="row">
-                     <div class="team-cards col-12 d-flex justify-content-center mt-4">
-     
-     <!-------------Begin Team Cards-->  
-     
-                     <div class="employee-card ml-3 border border-primary">
-                         <div class="card-header">
-                             <h2 class="card-title">${manager.name}</h2>
-                             <h3 class="card-title"><span class="material-icons">assignment</span>${manager.role}</h3>
-                         </div>
-                         <div class="card-body">
-                             <ul class="list-group list-group-flush ">
-                                 <li class="list-group-item"><strong>ID:</strong>${manger.id}</li>
-                                 <li class="list-group-item"><strong>Email: </strong>${manager.email}</li>
-                                 <li class="list-group-item"><strong>Office Number:</strong>${manager.officeNumber}</li>
-                             </ul>
-                         </div>
-                     </div>
-     
-                     <div class="employee-card ml-3 border border-primary ">
-                         <div class="card-header">
-                             <h2 class="card-title">${engineer.name}</h2>
-                             <h3 class="card-title"><span class="material-icons">engineering</span>${engineer.role}</h3>
-                         </div>
-                         <div class="card-body">
-                             <ul class="list-group list-group-flush">
-                                 <li class="list-group-item"><strong>ID:</strong>${engineer.id}</li>
-                                 <li class="list-group-item"><strong>Email: </strong>${engineer.email}</li>
-                                 <li class="list-group-item"><strong>GitHub:</strong>${engineer.gitHub}</li>
-                             </ul>
-                         </div>
-                     </div>
-     
-                     <div class="employee-card ml-3 border border-primary ">
-                         <div class="card-header">
-                             <h2 class="card-title">${intern.name}</h2>
-                             <h3 class="card-title"><span class="material-icons">school</span>${intern.role}</h3>
-                         </div>
-                         <div class="card-body">
-                             <ul class="list-group list-group-flush">
-                                 <li class="list-group-item"><strong>ID:</strong>${intern.id}</li>
-                                 <li class="list-group-item"><strong>Email: </strong>${intern.email}</li>
-                                 <li class="list-group-item"><strong>School:</strong>${intern.school}</li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
+             <div id="roles" class="container">
+             ${employeeCard}            
              </div>
-     
          </section>
          
          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-     
          
      </body>
      </html>`
-
 }
 module.exports = generateHTML;
