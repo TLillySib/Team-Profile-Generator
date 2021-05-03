@@ -1,5 +1,5 @@
 function cardManager(data) {
-    return `<div class="card" style="max-width: 18rem;">
+    return `<div class="card" style="max-width: 25rem;">
     <div class="employeeCard">
         <div class="card-header">
             <h2>${data.name}</h2>
@@ -7,9 +7,9 @@ function cardManager(data) {
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>ID:</strong> ${data.id}</li>
-                <li class="list-group-item"><strong>Email: </strong> ${data.officeNumber}</li>
-                <li class="list-group-item"><strong>Office Number:</strong> 1</li>
+                <li class="list-group-item"><strong>ID: </strong>${data.id}</li>
+                <li class="list-group-item"><strong>Email: </strong>${data.email}</li>
+                <li class="list-group-item"><strong>Office Number: </strong>${data.officeNumber}</li>
             </ul>
         </div>                
     </div>
@@ -18,7 +18,7 @@ function cardManager(data) {
 
 
 function cardEngineer(data) {
-    return `<div class="card" style="max-width: 18rem;">
+    return `<div class="card" style="max-width: 25rem;">
     <div class="employeeCard">
         <div class="card-header">
             <h2>${data.name}</h2>
@@ -26,9 +26,9 @@ function cardEngineer(data) {
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>ID:</strong> ${data.id}</li>
-                <li class="list-group-item"><strong>Email: </strong> ${data.email}</li>
-                <li class="list-group-item"><strong>GitHub:</strong> ${data.gitHub}</li>
+                <li class="list-group-item"><strong>ID: </strong>${data.id}</li>
+                <li class="list-group-item"><strong>Email: </strong>${data.email}</li>
+                <li class="list-group-item"><strong>GitHub: </strong>${data.github}</li>
             </ul>
         </div>                
     </div>
@@ -37,7 +37,7 @@ function cardEngineer(data) {
 
 
 function cardIntern(data) {
-    return `<div class="card" style="max-width: 18rem;">
+    return `<div class="card" style="max-width: 25rem;">
     <div class="employeeCard">
         <div class="card-header">
             <h2>${data.name}</h2>
@@ -45,9 +45,9 @@ function cardIntern(data) {
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>ID:</strong> ${data.id}</li>
-                <li class="list-group-item"><strong>Email: </strong> ${data.email}</li>
-                <li class="list-group-item"><strong>School: </strong> ${data.school}</li>
+                <li class="list-group-item"><strong>ID: </strong>${data.id}</li>
+                <li class="list-group-item"><strong>Email: </strong>${data.email}</li>
+                <li class="list-group-item"><strong>School: </strong>${data.school}</li>
             </ul>
         </div>                
     </div>

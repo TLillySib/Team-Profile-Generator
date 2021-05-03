@@ -30,7 +30,7 @@ createManager = () => {
         message: "What is the manager's office number?",
       },
     ])
-    .then(({ name, id, email, officeNumber }) => {
+    .then(({ name, id, email, officeNumber}) => {
       const manager = new Manager(name, id, email, officeNumber);
       teamMembers.push(manager);
       console.log(manager);
@@ -58,12 +58,12 @@ createEngineer = () => {
       },
       {
         type: "input",
-        name: "gitHub",
+        name: "github",
         message: "Enter the engineer's Github username:",
       },
     ])
-    .then(({ name, id, email, gitHub }) => {
-      const engineer = new Engineer(name, id, email, gitHub);
+    .then(({ name, id, email, github }) => {
+      const engineer = new Engineer(name, id, email, github);
       teamMembers.push(engineer);
       console.log(engineer);
       menu();
@@ -94,7 +94,7 @@ createIntern = () => {
         message: "Enter the school the intern attends:",
       },
     ])
-    .then(({ name, id, email, school }) => {
+    .then(({ name, id, email, school}) => {
       const intern = new Intern(name, id, email, school);
       teamMembers.push(intern);
       console.log(intern);
