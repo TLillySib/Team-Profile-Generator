@@ -30,6 +30,8 @@ Build a Node.js command-line application that takes in information about employe
   
   ## Usage
   What does the user need to know about using this repository? Provide instructions and examples for use. 
+
+  + <img src="./assets/Team-profile.png">
  
 
   ## Credits
