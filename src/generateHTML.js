@@ -22,7 +22,7 @@ function cardEngineer(data) {
     <div class="employeeCard">
         <div class="card-header">
             <h2>${data.name}</h2>
-            <h3 class="card-title"><span class="material-icons">assignment</span>Engineer</h3>
+            <h3 class="card-title"><span class="material-icons">engineering</span>Engineer</h3>
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">
@@ -41,7 +41,7 @@ function cardIntern(data) {
     <div class="employeeCard">
         <div class="card-header">
             <h2>${data.name}</h2>
-            <h3 class="card-title"><span class="material-icons">assignment</span>Intern</h3>
+            <h3 class="card-title"><span class="material-icons">school</span>Intern</h3>
         </div>
         <div class="card-body">
             <ul class="list-group list-group-flush">

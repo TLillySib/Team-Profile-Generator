@@ -1,0 +1,42 @@
+.jumbotron {
+    background-color: steelblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    color:silver;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.card-deck {
+    margin-left: 5px;
+}
+
+.card {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0.5em;
+    border: 1px solid darkslategray;
+
+}
+
+.card-header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    background-color: silver;
+    color: steelblue;
+    font-weight: 500;
+}
+
+.card-body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.employee-card {
+    border-radius: 5pt;
+}
+
